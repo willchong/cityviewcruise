@@ -1,0 +1,26 @@
+{
+  "name": "vw-modelspages-2017",
+  "version": "1.0.0",
+  "author(s)": [
+    "William Chong <williamc@tribalworldwide.ca>"
+  ],
+  "description": "Volkswagen Model Page Templates for 2017",
+  "dependencies": {
+    "gulp":"latest",
+    "gulp-watch":"latest",
+    "gulp-copy":"latest",
+    "gulp-concat":"latest",
+    "gulp-sass":"latest",
+    "gulp-autoprefixer":"latest",
+    "gulp-html-replace":"latest",
+    "gulp-imagemin":"latest",
+    "imagemin-pngquant":"latest",
+    "gulp-html-extend":"latest",
+    "gulp-data":"latest",
+    "gulp-nunjucks-render":"latest",
+    "fs":"latest",
+    "gulp-rename":"latest",
+    "del":"latest",
+    "gulp-util":"latest"
+  }
+}
