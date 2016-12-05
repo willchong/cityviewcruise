@@ -40,6 +40,10 @@ nav {
     top: 16px;
   }
   .navlink {
+    border-right: 1px solid $t-white;
+    &:last-child {
+      border-right: none;
+    }
     svg:hover {
       path {
         fill: $red;

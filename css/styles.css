@@ -1005,8 +1005,12 @@ nav {
     vertical-align: middle; }
   nav.active {
     top: 16px; }
-  nav .navlink svg:hover path {
-    fill: #a42324; }
+  nav .navlink {
+    border-right: 1px solid rgba(255, 255, 255, 0.85); }
+    nav .navlink:last-child {
+      border-right: none; }
+    nav .navlink svg:hover path {
+      fill: #a42324; }
 
 section.schedule {
   padding: 16px 16px 48px;
