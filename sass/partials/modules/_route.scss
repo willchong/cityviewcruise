@@ -1,0 +1,20 @@
+section.route {
+  padding: 60px 0 60px;
+  color: white;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  background: url('../images/blue-pattern.jpg') repeat;
+  z-index: 101;
+  h1 {
+    padding: 24px;
+    color: $white;
+    display: block;
+  }
+  img {
+    width: 80%;
+    display: inline-block;
+    margin: 0 auto;
+    border: 8px solid $darkblue;
+  }
+}

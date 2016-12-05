@@ -1,0 +1,25 @@
+section.charters {
+  padding: 60px;
+  color: $red;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 100;
+  background: $darkblue;
+  font-size: 0;
+  h1 {
+    padding: 0 0 24px;
+    color: $white;
+    display: block;
+    font-size: 2rem;
+  }
+  p {
+    color: $white;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 24px 48px;
+  }
+}

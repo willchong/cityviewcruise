@@ -1,0 +1,122 @@
+section.schedule {
+  padding: 16px 16px 48px;
+  color: white;
+  background: url('../images/wood-pattern.png') repeat;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 102;
+  h1 {
+    text-align: center;
+    // @include textshadow();
+    color: $white;
+    margin: 0 auto;
+    margin-top: 32px;
+    padding-bottom: 8px;
+    padding-top: 20px;
+    background: $t-red;
+    width: 100%;
+    max-width: 800px;
+  }
+  h2 {
+    color: $blue;
+    margin-top: 32px;
+    text-transform: uppercase;
+  }
+  p {
+    text-align: center;
+    color: $white;
+    padding-bottom: 16px;
+    margin: 0 auto;
+    background: $t-red;
+    width: 100%;
+    max-width: 800px;
+  }
+  .tour {
+    width: 100%;
+    max-width: 800px;
+    background: $t-white;
+    margin: 0 auto;
+    border: 4px solid $t-red;
+    .times-container {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 0;
+      span {
+        display: inline-block;
+        width: 33.3333%;
+        text-align: center;
+        padding: 24px;
+        font-family: $cocogoose;
+        color: $black;
+        font-size: 1.8rem;
+      }
+    }
+  }
+  table {
+    display: block;
+    color: $black;
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: center;
+    background: $t-white;
+    padding: 12px 0;
+    tbody {
+      display: inline;
+      tr {
+        td {
+          span {
+            text-align: left;
+            display: block;
+            margin: 24px 24px;
+            font-family: $cocogoose;
+            @include textshadowwhite();
+            color: $black;
+            font-size: 1.8rem;
+          } 
+        }
+      }
+    }
+    &.return {
+      border-top: 0;
+      background: transparent;
+      padding: 0;
+      tbody {
+        tr {
+          td {
+            span {
+              display: block;
+              margin: 24px 12px;
+              font-family: $cocogoose;
+              @include textshadowwhite();
+              color: $blue;
+              font-size: 1.4rem;
+            } 
+          }
+        }
+      }
+    }
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../images/rope.png) repeat-x;
+    height: 45px;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../images/rope.png) repeat-x;
+    height: 45px;
+  }
+}

@@ -1,0 +1,24 @@
+$blue: #0e73b5;
+$red: #a42324;
+$white: #fff;
+$black: #000;
+$darkblue: #0f223a;
+$grey: #dddddd;
+
+$t-blue: rgba(14,118,188, 0.7);
+$t-red: rgba(164,35,36, 0.7);
+$t-white: rgba(255,255,255, 0.85);
+$t-black: rgba(0,0,0, 0.55);
+
+@mixin dropshadow() {
+	-webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.25);
+	box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.25);
+}
+
+@mixin textshadow() {
+	text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.85);
+}
+@mixin textshadowwhite() {
+	text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.85);
+}

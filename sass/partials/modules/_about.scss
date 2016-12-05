@@ -1,0 +1,32 @@
+section.about {
+  padding: 60px;
+  color: $red;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 101;
+  background: url('../images/wood-pattern.png') repeat;
+  font-size: 0;
+  h1 {
+    padding: 0 0 24px;
+    color: $red;
+    display: block;
+    font-size: 2rem;
+  }
+  p {
+    color: $black;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 24px 48px;
+    background: $t-white;
+    &:first-child {
+      padding-bottom: 0;
+    }
+    &:last-child {
+      padding-top: 0;
+    }
+  }
+}

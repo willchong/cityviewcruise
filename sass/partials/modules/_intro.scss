@@ -1,0 +1,52 @@
+section.intro {
+  background: $blue;
+  padding: 60px 0;
+  color: white;
+  background: url('../images/boat.jpg') center center;
+  min-height: 560px;
+  background-size: cover;
+  width: 100%;
+  text-align: center;
+  h1 {
+    text-align: center;
+    @include textshadow();
+    line-height: 1.4;
+    margin-top: 60px;
+    background: $t-black;
+    padding-top: 16px;
+  }
+  p {
+    text-align: center;
+    @include textshadow();
+    font-weight: 700;
+    margin-bottom: 16px;
+    &.subhead {
+      padding-top: 16px;
+      padding-bottom: 16px;
+      background: $t-black;
+      font-size: 1.2rem;
+      line-height: 1.4;
+    }
+  }
+
+  a.cta {
+    border-radius: 8px;
+    background: $t-red;
+    color: $white;
+    margin: 0 auto;
+    padding: 24px 48px;
+    position: relative;
+    display: inline-block;
+    font-family: $cocogoose;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    text-decoration: none;
+    &:hover {
+      color: $red;
+      background: $white;
+    }
+  }
+}

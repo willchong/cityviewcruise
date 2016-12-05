@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'cocogoose';
+    src: url('../fonts/cocogoose.eot');
+    src: url('../fonts/cocogoose.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/cocogoose.woff') format('woff'),
+         url('../fonts/cocogoose.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+$cocogoose: 'cocogoose', arial, sans-serif;
+$raleway: 'Raleway', sans-serif;

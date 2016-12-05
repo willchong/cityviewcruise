@@ -1,0 +1,59 @@
+section.faq {
+  padding: 60px;
+  color: $white;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 101;
+  background: url('../images/dark-wood-pattern.png') repeat;
+  font-size: 0;
+  h1 {
+    padding: 0 0 24px;
+    color: $white;
+    display: block;
+    font-size: 2rem;
+  }
+  ul {
+    line-height: 1.4;
+    width: 50%;
+    display: inline-block;
+    li {
+      font-size: 1rem;
+      text-align: left;
+      &:nth-child(odd) {
+        font-weight: bold;
+        margin-bottom: 4px;
+      }
+      &:nth-child(even) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../images/rope.png) repeat-x;
+    height: 45px;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../images/rope.png) repeat-x;
+    height: 45px;
+  }
+  @include breakpoint(medium) {
+    ul {
+      display: block;
+      width: 100%;
+      padding: 24px;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+@mixin breakpoint($point) {
+  @if $point == xxlarge {
+    @media (max-width: 1400px) { @content; }
+  }
+  @if $point == xlarge {
+    @media (max-width: 1200px) { @content; }
+  }
+  @if $point == large {
+    @media (max-width: 1024px) { @content; }
+  }
+  @if $point == xmedium {
+    @media (max-width: 960px) { @content; }
+  }
+  @if $point == medium {
+    @media (max-width: 768px)  { @content; }
+  }
+  @if $point == small {
+    @media (max-width: 640px)  { @content; }
+  }
+  @if $point == trim-large {
+    @media (max-width: 1400px) { @content; }
+  }
+  @if $point == trim-medium {
+    @media (max-width: 800px) { @content; }
+  }
+}
+
+@mixin bp-retina {
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) { 
+    @content
+  }
+}
