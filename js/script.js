@@ -26,4 +26,9 @@ $(document).ready(function() {
       $("html, body").animate({ scrollTop: position-64 });
   });
 
+  // $('section.intro .cta').on('click', function(event) {
+  //     event.preventDefault();
+  //     $('section.intro .disclaimer').show();
+  // });
+
 });

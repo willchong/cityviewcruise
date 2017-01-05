@@ -954,6 +954,18 @@ section.intro {
       background: rgba(0, 0, 0, 0.55);
       font-size: 1.2rem;
       line-height: 1.4; }
+    section.intro p.disclaimer {
+      padding: 16px;
+      margin: 12px auto;
+      background: rgba(255, 255, 255, 0.85);
+      line-height: 1.4;
+      border: 1px solid #a42324;
+      color: #a42324;
+      font-weight: 700;
+      text-transform: uppercase;
+      display: none;
+      width: 50%;
+      text-shadow: none; }
   section.intro a.cta {
     border-radius: 8px;
     background: rgba(164, 35, 36, 0.7);
@@ -1012,6 +1024,24 @@ nav {
     nav .navlink svg:hover path {
       fill: #a42324; }
 
+@media (max-width: 768px) {
+  nav {
+    top: -100px;
+    font-size: 0;
+    width: 400px; }
+    nav #anchor {
+      display: none; }
+    nav .navlink {
+      font-size: 1rem;
+      border-right: none; }
+      nav .navlink:last-child {
+        border-right: none; }
+      nav .navlink:nth-child(3) {
+        border-right: none; }
+      nav .navlink li {
+        width: 120px;
+        padding: 12px 12px; } }
+
 section.schedule {
   padding: 16px 16px 48px;
   color: white;
@@ -1059,7 +1089,7 @@ section.schedule {
         text-align: center;
         padding: 24px;
         font-family: "cocogoose", arial, sans-serif;
-        color: #000;
+        color: #0e73b5;
         font-size: 1.8rem; }
   section.schedule table {
     display: block;
@@ -1214,6 +1244,24 @@ section.route {
     display: inline-block;
     margin: 0 auto;
     border: 8px solid #0f223a; }
+
+section.social {
+  padding: 60px 0 60px;
+  background: url("../images/wood-pattern.png") repeat;
+  z-index: 101; }
+  section.social:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../images/rope.png) repeat-x;
+    height: 45px; }
+  section.social .sb_instagram_header {
+    display: none; }
+  section.social #sbi_load {
+    padding-top: 16px !important; }
 
 section.charters {
   padding: 60px;

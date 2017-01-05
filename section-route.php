@@ -1,8 +1,7 @@
 <section class="route" id="routes">
 <!-- route -->
-	<h1>Route Map</h1>
-	<a href="<?php echo get_template_directory_uri(); ?>/images/route.jpg" target="_blank">
-		<img src="<?php echo get_template_directory_uri(); ?>/images/route.jpg" alt="">
+	<?php the_title('<h1>','</h1>'); ?>
+	<a href="<?php echo get_post_meta(get_the_ID(), 'imageUrl')[0]; ?>" target="_blank">
+		<img src="<?php echo get_post_meta(get_the_ID(), 'imageUrl')[0]; ?>" alt="">
 	</a>
-<?php //the_content(); ?>
 </section>

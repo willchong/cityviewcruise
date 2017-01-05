@@ -51,3 +51,29 @@ nav {
     }
   }
 }
+
+@include breakpoint(medium) {
+  nav {
+    top: -100px;
+    font-size: 0;
+    width: 400px;
+    #anchor {
+      display: none;
+    }
+    .navlink {
+      font-size: 1rem;
+      border-right: none;
+      &:last-child {
+        border-right: none;
+      }
+      &:nth-child(3) {
+        border-right: none;
+      }
+      li {
+        width: 120px;
+        padding: 12px 12px;
+        // text-decoration: underline;
+      }
+    }
+  }
+}

@@ -41,7 +41,7 @@ $the_query = new WP_Query( $args ); ?>
 		<?php if (get_the_title($post) == 'Intro'): ?>
 			<?php get_template_part('section-intro'); ?>
 
-		<?php elseif (get_the_title($post) == 'Schedule and Times'): ?>
+		<?php elseif (get_the_title($post) == 'Tour Times'): ?>
 			<?php get_template_part('section-schedule'); ?>
 
 		<?php elseif (get_the_title($post) == 'Location'): ?>

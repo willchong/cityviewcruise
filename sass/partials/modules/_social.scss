@@ -1,0 +1,21 @@
+section.social {
+  padding: 60px 0 60px;
+  background: url('../images/wood-pattern.png') repeat;
+  z-index: 101;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../images/rope.png) repeat-x;
+    height: 45px;
+  }
+  .sb_instagram_header {
+    display: none;
+  }
+  #sbi_load {
+    padding-top: 16px !important;
+  }
+}

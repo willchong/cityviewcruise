@@ -27,6 +27,19 @@ section.intro {
       font-size: 1.2rem;
       line-height: 1.4;
     }
+    &.disclaimer {
+      padding: 16px;
+      margin: 12px auto;
+      background: $t-white;
+      line-height: 1.4;
+      border: 1px solid $red;
+      color: $red;
+      font-weight: 700;
+      text-transform: uppercase;
+      display: none;
+      width: 50%;
+      text-shadow: none;
+    }
   }
 
   a.cta {

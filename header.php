@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-K63P5K3');</script>
+<!-- End Google Tag Manager -->
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/styles.css" />
@@ -34,18 +41,16 @@
 
         // Let's also add a marker while we're at it
         var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(43.637702, -79.382697),
+            position: new google.maps.LatLng(<?php $page = get_page_by_title('Location', OBJECT, 'post'); echo get_post_meta($page->ID, 'mapCoords')[0]; ?>),
             map: map
         });
 
-        var contentString = '<div id="marker">'+
-              '<p>The <strong>Ste Marie 1</strong> is located at <strong>235 Queens Quay West</strong>, near the Harbourfront Centre at the West Pier.</p>'+
-              '<p>Follow Lower Simcoe St. south to the water and the Ste Marie 1 is on the west side in front of Natrel pond/rink.</p>'+
-              '<a href="https://www.google.com/maps/place/City+View+Cruise+-+St.+Marie+1/@43.6373772,-79.3843819,17.22z/data=!4m5!3m4!1s0x0:0x5db3f72b46aee81d!8m2!3d43.6376902!4d-79.3827083?hl=en-US" target="_blank">Open in Google Maps</a>.'+
-              ' </div>';
+        var content = '<div id="marker"><?php $page = get_page_by_title('Location', OBJECT, 'post'); $content = apply_filters('the_content', get_post_field('post_content', $page->ID)); $content = preg_replace( '/\r|\n/', '', $content ); echo $content ?></div>';
+
+        // var contentString = "<div id='marker'>"+"</div>";
 
           var infowindow = new google.maps.InfoWindow({
-            content: contentString,
+            content: content,
             pixelOffset: google.maps.Size(200,200)
           });
 
@@ -59,6 +64,10 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K63P5K3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <div id="wrapper" class="hfeed">
 <header id="header" role="banner">
 <section id="branding" style="display: none">

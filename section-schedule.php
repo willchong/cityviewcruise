@@ -1,42 +1,37 @@
 <section class="schedule" id="times">
 
-	<h1>Today's Tour Times</h1>
-	<p class="disclaimer">(Subject to Availability)</p>
+	<?php the_title('<h1>','</h1>'); ?>
+
+	<p class="disclaimer"><?php echo get_post_meta(get_the_ID(), 'disclaimer')[0]; ?></p>
 	<div class="tour">
 		<div class="times-container">
-			<span>12:15PM</span>
-			<span>1:30PM</span>
-			<span>2:45PM</span>
-			<span>4:00PM</span>
-			<span>5:15PM</span>
-			<span>6:30PM</span>
-			<span>7:45PM</span>
-			<span>9:00PM</span>
+			<?php
+			// vars	
+			$times = get_field('tour_times');
+			// check
+			if( $times ): ?>
+				<?php foreach( $times as $time ): ?>
+					<span><?php echo $time; ?></span>
+				<?php endforeach; ?>
+			<?php endif; ?>
 		</div>
 	</div>
-
-	<h2>Island Return Times</h2>
+	
+	<h2><?php echo get_post_meta(get_the_ID(), 'subhead')[0]; ?></h2>
 	<table class="return">
 		<tbody>
 			<tr>
-				<td>
-					<span>2:00PM</span>
-				</td>
-				<td>
-					<span>3:15PM</span>
-				</td>
-				<td>
-					<span>4:30PM</span>
-				</td>
-				<td>
-					<span>5:45PM</span>
-				</td>
-				<td>
-					<span>7:00PM</span>
-				</td>
+				<?php
+				// vars	
+				$times = get_field('return_times');
+				// check
+				if( $times ): ?>
+					<?php foreach( $times as $time ): ?>
+						<td><span><?php echo $time; ?></span></td>
+					<?php endforeach; ?>
+				<?php endif; ?>
 			</tr>
 		</tbody>
 	</table>
 
-<?php //the_content(); ?>
 </section>
